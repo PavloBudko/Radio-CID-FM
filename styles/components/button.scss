@@ -1,0 +1,26 @@
+.button{
+    width: 10.25em;
+    height: 2.75em;
+    border-radius: 0.5em;
+    background-color: #F58122;
+    color: #242530;  
+    border: none;
+    border: 2px solid #F58122;
+    transition: .2s;
+    font-family: "Play", sans-serif;
+    font-size: 1.13em;
+    &--small{
+        width: 8.62em;
+    }
+    &--nobg{
+      background-color: transparent;
+      color: #fff;
+    }
+    &:hover{
+        border: 2px solid #fff;
+    }
+    &:focus{
+      background-color: #CA6D20;
+      color: #242530, 100%;
+    }
+}

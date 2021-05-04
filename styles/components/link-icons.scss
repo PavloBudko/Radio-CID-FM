@@ -1,0 +1,22 @@
+.round-border {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4em;
+    height: 4em;
+    transition: 0.3s;
+    &:hover {
+      border: 2px solid #f58122;
+      .icon {
+        fill: #f58122;
+      }
+    }
+    .icon {
+      width: 2em;
+      height: 2em;
+      fill: #fff;
+      transition: 0.3s;
+    }
+  }

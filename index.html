@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Play&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./img/logo head.png" type="#">
+    <title>Радіо CID FM</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="navigation container-fluid">
+        <nav class="navbar navbar-expand-xl navbar-dark justify-content-sm-between justify-content-center">
+          <a class="navbar-brand" href="#">
+            <img src="./img/logo.png" alt="logo" />
+          </a>
+          <div class="navbar-player">
+            <div class="player-playPause" id="playPause-mini">
+              <img src="./img/play-mini.svg" alt="play" id="play-mini" />
+              <img class="display-false"
+                src="./img/pause-mini.svg"
+                alt="pause"
+                id="pause-mini"/>
+            </div>
+            <div class="player-headline">
+              <span class="headline-subtitle"> Зараз грає </span>
+              <span class="headline-title"> Sia – My Old Santa Claus</span>
+            </div>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Головна</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Програми та подкасти</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Плейлист</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Співпраця</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Замовити пісню</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Купити атрибутику</a>
+              </li>
+              <li class="nav-item" id="language">
+                <a class="nav-link" href="#" id="eng">ENG</a>
+                <a class="nav-link display-false" href="#" id="ua">UA</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <section class="first-section">
+        <div class="container">
+          <div
+            class="row align-items-center justify-content-xl-start justify-content-md-around justify-content-center">
+            <div class="col-xl-5 col-lg-6 col-12 text">
+              <h1>Слухати радіо твого улюбленого міста CID FM</h1>
+              <div class="link-subsection">
+                <div class="round-border">
+                    
+                              <div class="icon facebook">
+                                    <img src="./img/face.png" alt="facebook">
+                              </div>
+                </div>
+                <div class="round-border">
+                    <div class="icon playlist">
+                        <img src="./img/list.svg" alt="play_list">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-5 col-6 player">
+              <div class="play-pause-container" id="playPause-maxy">
+                <img
+                  src="./img/img-index/play-maxy.png"
+                  alt="play"
+                  id="play-maxy"/>
+                <img
+                  src="./img/img-index/pause-maxy.png"
+                  alt="pause"
+                  class="display-false"
+                  id="pause-maxy"/>
+              </div>
+              <div class="volume-container">
+                <svg class="icon">
+                  <use xlink:href="./img/icons.svg#volume-min"></use>
+                </svg>
+                <div class="volume-wrapper">
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="50"
+                    class="styled-slider slider-progress"
+                    id="myRange"/>
+                </div>
+                <svg class="icon">
+                  <use xlink:href="./img/icons.svg#volume-max"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="second-section">
+        <div class="container-lg">
+          <div class="row justify-content-md-between justify-content-center">
+            <div class="col-md-4 col-10 mt-3">
+              <div class="song-card m-auto">
+                <div class="song-card-info">
+                  <span class="song-card-subtitle">Попередній трек</span>
+                  <div class="song-card-title">
+                    <span class="time">23:40 &nbsp;</span>
+                    <span class="name">A Fine Frenzy – Winter White</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-10 mt-3">
+              <div class="song-card now-play m-auto">
+                <svg class="icon">
+                  <use xlink:href="./img/icons.svg#play-nobg"></use>
+                </svg>
+                <div class="song-card-info">
+                  <span class="song-card-subtitle">Зараз грає</span>
+                  <div class="song-card-title">
+                    <span class="time">23:42 &nbsp;</span>
+                    <span class="name">Sia – My Old Santa Claus</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-10 mt-3">
+              <div class="song-card m-auto">
+                <div class="song-card-info">
+                  <span class="song-card-subtitle">Наступний трек</span>
+                  <div class="song-card-title">
+                    <span class="time">23:46 &nbsp;</span>
+                    <span class="name"> O.TORVALD – Крик</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="third-section">
+        <h2>Скоро</h2>
+        <div class="slider-container container-fluid">
+          <div
+            id="multiCarousel"
+            class="carousel slide w-100"
+            data-ride="carousel">
+            <div class="container">
+              <div class="carousel-inner w-100" role="listbox">
+                <div class="carousel-item active">
+                  <img class="d-block col-md-3 col-12"
+                    src="./img/img-index/slider1.png"
+                    alt="soon"/>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="d-block col-md-3 col-12"
+                    src="./img/img-index/slider2.png"
+                    alt="soon"/>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="d-block col-md-3 col-12"
+                    src="./img/img-index/slider3.png"
+                    alt="soon"/>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="d-block col-md-3 col-12"
+                    src="./img/img-index/slider4.png"
+                    alt="soon"/>
+                </div>
+              </div>
+            </div>
+
+            <a class="carousel-control-prev"
+              href="#multiCarousel"
+              role="button"
+              data-slide="prev">
+              <svg class="icon">
+                <use xlink:href="./img/icons.svg#arrow-left"></use>
+              </svg>
+            </a>
+            <a class="carousel-control-next"
+              href="#multiCarousel"
+              role="button"
+              data-slide="next" >
+              <svg class="icon">
+                <use xlink:href="./img/icons.svg#arrow-right"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="fourth-section">
+        <div class="container-lg">
+          <div class="row justify-content-md-around justify-content-xl-between flex-md-row flex-column align-items-center">
+            <div class="col-md-5 col-9 flex-center">
+              <h3>Замовити пісню</h3>
+              <span></span>
+              <p>
+                Даруйте собі та своїм близьким маленьку щоденну радість -
+                замовляйте пісню на CID FM. І хай прибуде з вами магія радіо!
+              </p>
+              <button class="button">Замовити</button>
+            </div>
+            <div class="col-md-1 col-12 flex-center line"></div>
+            <div class="col-md-5 col-9 flex-center">
+              <h3>Купити атрибутику</h3>
+              <span></span>
+              <p>
+                Ми підготували для вас дещо цікаве і дуже цінне для усіх
+                поціновувачів радіо CID FM. Станьте частинкою рідної та
+                унікальної радіоспільноти CID FM.
+              </p>
+              <button class="button">Замовити</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fifth-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-6 img-container">
+              <img src="./img/coop.jpg" alt="CID team" />
+            </div>
+            <div class="col-5 text">
+              <h3 class="title">Співпраця</h3>
+              <div class="info">
+                <h4 class="subtitle">
+                  Запрошуємо до співпраці рекламодавців, які турбуються про
+                  своїх клієнтів!
+                </h4>
+                <div class="info-container">
+                  <p>
+                    Пропонуємо: Аудіорекламу. Виробництво аудіороликів.
+                    Виробництво подкастів. Спонсорську підтримку програм. Стати
+                    гостем студії.
+                  </p>
+                  <p>
+                    Разом із нашими фахівцями ви зможете розробити ексклюзивну
+                    комунікаційну стратегію, враховуючи потреби нашої аудиторії
+                    та ваших клієнтів. Ба навіть створити новий радіопроєкт.
+                  </p>
+                </div>
+                <button class="button">Детально</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sixth-section">
+        <div class="container-lg">
+          <h3>Програми та подкасти</h3>
+          <div class="pp-container">
+            <div class="img-container">
+              <img src="./img/pp/pp1.jpg" alt="podcast" />
+              <div class="img-text">
+                <h5>Район здорової людини</h5>
+                <p>Спростовуємо стереотипи про здоров’я</p>
+              </div>
+            </div>
+            <div class="img-container">
+              <img src="./img/pp/pp2.jpg" alt="podcast" />
+              <div class="img-text">
+                <h5>Район здорової людини</h5>
+                <p>Спростовуємо стереотипи про здоров’я</p>
+              </div>
+            </div>
+            <div class="img-container">
+              <img src="./img/pp/pp3.jpg" alt="podcast" />
+              <div class="img-text">
+                <h5>Район здорової людини</h5>
+                <p>Спростовуємо стереотипи про здоров’я</p>
+              </div>
+            </div>
+            <div class="img-container">
+              <img src="./img/pp/pp4.jpg" alt="podcast" />
+              <div class="img-text">
+                <h5>Район здорової людини</h5>
+                <p>Спростовуємо стереотипи про здоров’я</p>
+              </div>
+            </div>
+            <div class="img-container">
+              <img src="./img/pp/pp5.jpg" alt="podcast" />
+              <div class="img-text">
+                <h5>Район здорової людини</h5>
+                <p>Спростовуємо стереотипи про здоров’я</p>
+              </div>
+            </div>
+            <div class="img-container">
+              <img src="./img/pp/pp6.jpg" alt="podcast" />
+              <div class="img-text">
+                <h5>Район здорової людини</h5>
+                <p>Спростовуємо стереотипи про здоров’я</p>
+              </div>
+            </div>
+            <div class="img-container">
+              <img src="./img/pp/pp7.jpg" alt="podcast" />
+              <div class="img-text">
+                <h5>Район здорової людини</h5>
+                <p>Спростовуємо стереотипи про здоров’я</p>
+              </div>
+            </div>
+            <div class="img-container">
+              <img src="./img/pp/pp8.jpg" alt="podcast" />
+              <div class="img-text">
+                <h5>Район здорової людини</h5>
+                <p>Спростовуємо стереотипи про здоров’я</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="button button--small">Більше</button>
+        </div>
+      </section>
+      <section class="seventh-section">
+        <div class="container-lg">
+          <h3>Новини міста Луцьк</h3>
+          <div class="row justify-content-center">
+            <div class="col-md-4 col-sm-6 col-9">
+              <div class="card card1">
+                <div class="card-body">
+                  <div class="card-text">
+                    <p class="card-title">
+                      Схованка від дощу та місце для розвитку: про основні цілі
+                      та цінності Молодіжного центру Волині
+                    </p>
+                    <p class="card-info">
+                      Креативний простір для молоді у самому центр Луцька діє
+                      уже 5 років.
+                    </p>
+                  </div>
+                  <span>15:15 11.01.2021</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-9">
+              <div class="card card2">
+                <div class="card-body">
+                  <div class="card-text">
+                    <p class="card-title">
+                      Схованка від дощу та місце для розвитку: про основні цілі
+                      та цінності Молодіжного центру Волині
+                    </p>
+                    <p class="card-info">
+                      Креативний простір для молоді у самому центр Луцька діє
+                      уже 5 років.
+                    </p>
+                  </div>
+                  <span>15:15 11.01.2021</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-9">
+              <div class="card card3">
+                <div class="card-body">
+                  <div class="card-text">
+                    <p class="card-title">
+                      Схованка від дощу та місце для розвитку: про основні цілі
+                      та цінності Молодіжного центру Волині
+                    </p>
+                    <p class="card-info">
+                      Креативний простір для молоді у самому центр Луцька діє
+                      уже 5 років.
+                    </p>
+                  </div>
+                  <span>15:15 11.01.2021</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="button button--small">Більше</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container-lg">
+        <div class="row">
+          <div class="col-md-3 col-8 infomation">
+            <div class="logo-container">
+              <img src="./img/logo.png" alt="logo" />
+            </div>
+            <div class="round-border">
+                <div class="icon facebook">
+                    <img src="./img/face.png" alt="facebook">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 contact">
+            <h4>Контакти</h4>
+            <div class="info-wrapper">
+              <div class="info-container">
+                <div class="icon-container">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons.svg#footer-phone"></use>
+                  </svg>
+                </div>
+                <div class="info">
+                  <a href="tel:+38(096)8696005" target="_blank">+38 (096) 869 6005</a>
+                  <a href="tel:+38(0332)788278" target="_blank">+38 (0332) 78 82 78</a>
+                </div>
+              </div>
+              <div class="info-container">
+                <div class="icon-container">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons.svg#footer-mail"></use>
+                  </svg>
+                </div>
+                <div class="info">
+                  <a href="mailto:radiosidfm@gmail.com" target="_blank">radiosidfm@gmail.com</a>
+                </div>
+              </div>
+              <div class="info-container">
+                <div class="icon-container">
+                  <svg class="icon">
+                    <use xlink:href="./img/icons.svg#footer-location"></use>
+                  </svg>
+                </div>
+                <div class="info">
+                  <a href="https://goo.gl/maps/3u3vAuakyGFUsjWf7" target="_blank">вул. Конякіна, 18в. Луцьк. Волинська обл., Україна. 43024</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-12 menu">
+            <h4>Меню</h4>
+            <div class="info">
+              <ul>
+                <li>
+                  <a href="#">Головна</a>
+                </li>
+                <li>
+                  <a href="#">Програми та подкасти</a>
+                </li>
+                <li>
+                  <a href="#">Плейлист</a>
+                </li>
+                <li>
+                  <a href="#">Співпраця</a>
+                </li>
+                <li>
+                  <a href="#">Замовити пісню</a>
+                </li>
+                <li>
+                  <a href="#">Купити атрибутику</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-4 col-5 order">
+            <button class="button button--nobg">Замовити пісню</button>
+            <button class="button button--nobg">Купити атрибутику</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="copyright">
+            <p>
+              © Медіа-холдинг CID Media Group, 2003-2021.<br />Усі права
+              захищені.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>
